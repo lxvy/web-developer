@@ -145,4 +145,36 @@ $(document).ready(function(){
 		$("#btnHit").toggle();
 		$("#btnStick").toggle();
 	});
+
+	$("#btnHit").click( function(){
+		hit();
+	});
+
+	function end(){
+		$("#btnHit").toggle();
+		$("#btnStick").toggle();
+		$("#btnRestart").toggle();
+	}
+
+	$("#btnStick").click( function(){
+		$("#hdrResult").html('Stick!')
+					   .attr('class', 'win');
+		$("#result").toggle();
+		end();
+	});
+
+	$("#btnRestart").click( function(){
+		$("#result").toggle();
+		$(this).toggle();
+		$("#my_hand").empty();
+		$("#hdrResult").html('');
+		$("#imgResult").attr('src','images/check.png');
+
+		used_cards.length = 0;
+		hand.cards.length = 0;
+		hand.current_total = 0;
+
+		$("#btnDeal").toggle()
+					 .trigger('click');
+	});
 });
