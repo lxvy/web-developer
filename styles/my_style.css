@@ -1,0 +1,26 @@
+
+.first{
+  margin-left: 280px;
+  margin-right: auto;
+  margin-top: 50px;
+}
+table{
+  width: 700px;
+  border: 0;
+  border-collapse: collapse;
+}
+th{
+  padding: 20px;
+  border: 2px solid #AAAAAA;
+}
+a{
+    font-size: 20pt;
+    color: #0066FF;
+    font-family: 宋体;
+    text-decoration: underline;
+    TEXT-DECORATION:none;
+}
+a:hover{
+  color:#33FF33;
+  text-decoration: none;
+}
